@@ -1,15 +1,16 @@
 :root {
-    --bg-primary: #0f172a;
-    --bg-secondary: #1e293b;
-    --bg-tertiary: #334155;
-    --accent-green: #10b981;
-    --accent-green-hover: #059669;
-    --accent-teal: #14b8a6;
-    --text-primary: #f8fafc;
-    --text-secondary: #94a3b8;
-    --border-color: #475569;
-    --danger: #ef4444;
-    --warning: #f59e0b;
+    /* New Green & Beige Palette */
+    --bg-primary: #fcfbfa;       /* Warm beige cream background */
+    --bg-secondary: #f3f1ec;     /* Light sage/beige card background */
+    --bg-tertiary: #e6e2d8;      /* Darker accent beige for tables */
+    --accent-green: #2c5e43;     /* Deep forest green primary accent */
+    --accent-green-hover: #1e422e; /* Darker forest green */
+    --accent-teal: #437a5d;      /* Medium sage green */
+    --text-primary: #1c2b21;     /* Dark charcoal green for text readability */
+    --text-secondary: #55665c;   /* Soft muted grey-green for metadata */
+    --border-color: #d1cbd4;     /* Neutral soft border */
+    --danger: #b93c3c;
+    --warning: #cc8111;
 }
 
 * {
@@ -28,7 +29,7 @@ body {
 
 header {
     background-color: var(--bg-secondary);
-    border-bottom: 1px solid var(--border-color);
+    border-bottom: 2px solid var(--accent-green);
     position: sticky;
     top: 0;
     z-index: 100;
@@ -57,21 +58,41 @@ header {
     color: var(--text-primary);
 }
 
-nav ul {
+/* Tab Controls Container */
+.tab-navigation {
     display: flex;
     list-style: none;
-    gap: 2rem;
+    gap: 1rem;
 }
 
-nav a {
+.tab-btn {
+    background: none;
+    border: none;
     color: var(--text-secondary);
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.2s;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.2s;
 }
 
-nav a:hover {
-    color: var(--accent-teal);
+.tab-btn:hover {
+    color: var(--accent-green);
+    background-color: rgba(44, 94, 67, 0.05);
+}
+
+.tab-btn.active {
+    color: var(--bg-primary);
+    background-color: var(--accent-green);
+}
+
+/* Tab Panel Visibility Rule */
+.tab-panel {
+    display: none;
+}
+.tab-panel.active {
+    display: block;
 }
 
 .hero {
@@ -84,9 +105,7 @@ nav a:hover {
 .hero h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
-    background: linear-gradient(135deg, var(--text-primary), var(--accent-teal));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--accent-green);
 }
 
 .hero p {
@@ -100,9 +119,6 @@ nav a:hover {
     max-width: 1400px;
     margin: 0 auto;
     padding: 0 2rem;
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 3rem;
 }
 
 .section-title {
@@ -110,10 +126,10 @@ nav a:hover {
     margin-bottom: 1.5rem;
     padding-bottom: 0.5rem;
     border-bottom: 2px solid var(--bg-secondary);
-    color: var(--accent-teal);
+    color: var(--accent-green);
 }
 
-/* Philosophical & Historical Concepts Grid */
+/* Concepts Layout Grid */
 .concepts-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -136,7 +152,7 @@ nav a:hover {
 
 .concept-card h3 {
     margin-bottom: 0.75rem;
-    color: var(--text-primary);
+    color: var(--accent-green);
     font-size: 1.25rem;
 }
 
@@ -145,7 +161,7 @@ nav a:hover {
     font-size: 0.95rem;
 }
 
-/* Search and Filter Section */
+/* Controls Wrapper (Search Area) */
 .controls-wrapper {
     background-color: var(--bg-secondary);
     padding: 1.5rem;
@@ -162,7 +178,6 @@ nav a:hover {
 .search-box {
     flex: 1;
     min-width: 300px;
-    position: relative;
 }
 
 .search-box input {
@@ -181,7 +196,7 @@ nav a:hover {
     border-color: var(--accent-green);
 }
 
-/* Master Plant Table Styles */
+/* Master Tables Styling */
 .table-container {
     width: 100%;
     overflow-x: auto;
@@ -200,7 +215,7 @@ table {
 
 th {
     background-color: var(--bg-tertiary);
-    color: var(--accent-teal);
+    color: var(--accent-green);
     padding: 1rem;
     font-weight: 600;
     border-bottom: 2px solid var(--border-color);
@@ -210,11 +225,27 @@ th {
 td {
     padding: 1rem;
     border-bottom: 1px solid var(--border-color);
-    vertical-align: top;
+    vertical-align: middle; /* Adjusted to balance text next to image */
 }
 
 tr:hover td {
-    background-color: rgba(255, 255, 255, 0.02);
+    background-color: rgba(44, 94, 67, 0.02);
+}
+
+/* Flex layout inside the Plant Name cell to support images */
+.plant-cell-meta {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.plant-thumbnail {
+    width: 70px;
+    height: 70px;
+    border-radius: 6px;
+    object-fit: cover;
+    background-color: var(--bg-tertiary);
+    border: 1px solid var(--border-color);
 }
 
 .badge {
@@ -228,10 +259,10 @@ tr:hover td {
     margin-bottom: 0.25rem;
 }
 
-.badge-safe { background-color: rgba(16, 185, 129, 0.2); color: #10b981; }
-.badge-warning { background-color: rgba(245, 158, 11, 0.2); color: #f59e0b; }
-.badge-danger { background-color: rgba(239, 68, 68, 0.2); color: #ef4444; }
-.badge-info { background-color: rgba(20, 184, 166, 0.2); color: #14b8a6; }
+.badge-safe { background-color: rgba(44, 94, 67, 0.15); color: #2c5e43; }
+.badge-warning { background-color: rgba(204, 129, 17, 0.15); color: #cc8111; }
+.badge-danger { background-color: rgba(185, 60, 60, 0.15); color: #b93c3c; }
+.badge-info { background-color: rgba(67, 122, 93, 0.15); color: #437a5d; }
 
 .scientific-name {
     font-style: italic;
@@ -242,15 +273,14 @@ tr:hover td {
 }
 
 .indigenous-name {
-    color: var(--accent-green);
+    color: var(--accent-teal);
     font-weight: 600;
     font-size: 0.85rem;
     display: block;
 }
 
-/* Quick Info Block */
 .info-callout {
-    background: linear-gradient(135deg, rgba(20, 184, 166, 0.1), rgba(16, 185, 129, 0.1));
+    background: linear-gradient(135deg, rgba(44, 94, 67, 0.05), rgba(67, 122, 93, 0.05));
     border-left: 4px solid var(--accent-green);
     padding: 1.5rem;
     border-radius: 0 8px 8px 0;
@@ -258,7 +288,7 @@ tr:hover td {
 }
 
 .info-callout h4 {
-    color: var(--text-primary);
+    color: var(--accent-green);
     margin-bottom: 0.5rem;
     font-size: 1.1rem;
 }
@@ -275,6 +305,8 @@ footer {
 @media (max-width: 768px) {
     .hero h1 { font-size: 2.25rem; }
     .header-container { flex-direction: column; gap: 1rem; }
+    .tab-navigation { width: 100%; justify-content: center; }
     .controls-wrapper { flex-direction: column; align-items: stretch; }
     .search-box { min-width: 100%; }
+    .plant-cell-meta { flex-direction: column; align-items: flex-start; }
 }
