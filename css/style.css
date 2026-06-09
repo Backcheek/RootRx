@@ -169,11 +169,33 @@ th {
 td {
     padding: 1.2rem 1rem;
     border-bottom: 1px solid #c7a970;
-    vertical-align: middle;
+    vertical-align: top;
 }
 
-tr:hover td {
-    background-color: rgba(20, 67, 42, 0.04);
+/* Special plant entry card design for long datasets */
+.plant-header-row {
+    background-color: #dcb875;
+}
+
+.plant-header-row td {
+    font-weight: bold;
+    color: #14432a;
+    font-size: 1.1rem;
+    border-bottom: none;
+    padding-bottom: 0.25rem;
+}
+
+.plant-detail-row td {
+    padding-top: 0.25rem;
+    padding-bottom: 1.5rem;
+}
+
+.plant-text-block {
+    background-color: rgba(255, 255, 255, 0.25);
+    padding: 1rem;
+    border-radius: 6px;
+    border: 1px dashed #c7a970;
+    color: #1d3325;
 }
 
 .badge {
@@ -195,8 +217,8 @@ tr:hover td {
 .indigenous-name {
     color: #226f46;
     font-weight: 700;
-    font-size: 0.85rem;
-    display: block;
+    font-size: 0.9rem;
+    margin-left: 0.5rem;
 }
 
 .scientific-name {
@@ -204,6 +226,8 @@ tr:hover td {
     color: #42574c;
     font-size: 0.85rem;
     display: block;
+    font-weight: normal;
+    margin-top: 0.25rem;
 }
 
 footer {
