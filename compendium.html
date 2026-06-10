@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RootRX | Botanical Compendium</title>
+    <title>RootRX | Plant Explorer</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -13,10 +13,9 @@
             <a href="index.html" class="logo">&#127807; Root<span>RX</span></a>
             <nav>
                 <ul>
-                    <li><a href="index.html">Overview & History</a></li>
-                    <li class="active"><a href="compendium.html">Botanical Compendium</a></li>
-                    <li><a href="modern.html">Modern Synthesis</a></li>
-                    <li><a href="credits.html">Credits & Disclaimer</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="active"><a href="compendium.html">Plant Explorer</a></li>
+                    <li><a href="credits.html">Project Details</a></li>
                 </ul>
             </nav>
         </div>
@@ -25,203 +24,410 @@
     <main>
         <div class="main-container">
             <section class="hero">
-                <h1>The Botanical Compendium</h1>
-                <p>An indexed repository of regional flora, featuring traditional naming systems, precise habitat details, and historical therapeutic applications verified across indigenous frameworks.</p>
+                <h1>Interactive Plant Explorer</h1>
+                <p>Here are the medicinal plants from the project notes. Read about where they grow and how they were traditionally used, then click the button on any card to see what modern drugstore medicine matches it!</p>
             </section>
 
-            <h2 class="section-title">Classified Flora Profiles</h2>
-            <div class="concepts-grid">
+            <h2 class="section-title">The Plant Cards</h2>
+            <div class="interactive-grid">
 
-                <div class="concept-card">
-                    <span class="indigenous-tag">Ashkibwaan</span>
-                    <h3>Jerusalem Artichoke</h3>
-                    <p style="font-style: italic; color: #42574c; margin-bottom: 0.5rem;">Helianthus tuberosus L.</p>
-                    <p><strong>Habitat:</strong> Moist soils across eastern Canada and northwestern US. Grows 5 to 10 feet tall with rough branching stems and golden-yellow autumn flower heads.</p>
-                    <p style="margin-top: 0.5rem;"><strong>Traditional Uses:</strong> The iron-rich, sweet, nut-like edible tubers contain simple carbohydrates that convert into natural sugars without raising glucose levels, making them excellent dietary staples for managing diabetes.</p>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <span class="indigenous-tag">Ashkibwaan</span>
+                            <h3>Jerusalem Artichoke</h3>
+                            <p class="botanical-meta">Helianthus tuberosus L.</p>
+                            <p><strong>Habitat:</strong> Moist soils across eastern Canada and northwestern US. Grows 5 to 10 feet tall with rough branching stems and golden-yellow autumn flower heads.</p>
+                            <p class="usage-text"><strong>Traditional Uses:</strong> The iron-rich, sweet, nut-like edible tubers contain simple carbohydrates that convert into natural sugars without raising glucose levels, making them excellent dietary staples for managing diabetes.</p>
+                            <button class="flip-btn" onclick="toggleFlip(this)">See Modern Match</button>
+                        </div>
+                        <div class="flip-card-back">
+                            <span class="modern-tag">Modern Drugstore Match</span>
+                            <h3>Metformin (Glucophage) / Clinical Diabetic Dietary Fibers (Inulin)</h3>
+                            <p class="synthesis-desc">Using a root that changes carbs into safe sugars without spiking glucose matches exactly what modern diabetes medications and pharmacy fiber supplements try to do today to keep blood sugar steady.</p>
+                            <button class="flip-btn back-btn" onclick="toggleFlip(this)">Go Back to Plant</button>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="concept-card">
-                    <span class="indigenous-tag">Doodooshaboojiibik</span>
-                    <h3>Common Dandelion</h3>
-                    <p style="font-style: italic; color: #42574c; margin-bottom: 0.5rem;">Taraxacum officinale</p>
-                    <p><strong>Habitat:</strong> Highly ubiquitous perennial found all over North American yards, fields, and roadsides, standing up to 20 inches tall with a hollow, milky stalk.</p>
-                    <p style="margin-top: 0.5rem;"><strong>Traditional Uses:</strong> Virtually every part holds value: young leaves are eaten raw in salads, crowns are steamed as hot vegetables, and roasted roots act as caffeine-free coffee. Used to remedy gallbladder problems, urinary disorders, high blood pressure, gout, and acne.</p>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <span class="indigenous-tag">Doodooshaboojiibik</span>
+                            <h3>Common Dandelion</h3>
+                            <p class="botanical-meta">Taraxacum officinale</p>
+                            <p><strong>Habitat:</strong> Highly ubiquitous perennial found all over North American yards, fields, and roadsides, standing up to 20 inches tall with a hollow, milky stalk.</p>
+                            <p class="usage-text"><strong>Traditional Uses:</strong> Virtually every part holds value: young leaves are eaten raw in salads, crowns are steamed as hot vegetables, and roasted roots act as coffee. Used to remedy gallbladder problems, urinary disorders, high blood pressure, and gout.</p>
+                            <button class="flip-btn" onclick="toggleFlip(this)">See Modern Match</button>
+                        </div>
+                        <div class="flip-card-back">
+                            <span class="modern-tag">Modern Drugstore Match</span>
+                            <h3>Cholestyramine (Prevalite) / Over-the-counter Pamabrom (Diuretic)</h3>
+                            <p class="synthesis-desc">Using dandelions to flush the urinary system and help the gallbladder works just like modern diuretic water pills and prescription liver/gallbladder medicines that clear out waste and lower body fluid pressure.</p>
+                            <button class="flip-btn back-btn" onclick="toggleFlip(this)">Go Back to Plant</button>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="concept-card">
-                    <span class="indigenous-tag">Ginebigo-ojiibik</span>
-                    <h3>Seneca Snakeroot</h3>
-                    <p style="font-style: italic; color: #42574c; margin-bottom: 0.5rem;">Polygala senega</p>
-                    <p><strong>Habitat:</strong> Prefers high-altitude rocky or limestone environments from New England to the Canadian Rockies. Stands 0.5 to 2 feet tall with white/pink spikes.</p>
-                    <p style="margin-top: 0.5rem;"><strong>Traditional Uses:</strong> Historically treated snakebites, colds, sore throats, toothaches, and earaches. Modern applications deploy it as a powerful cough syrup expectorant and throat gargle (acts as a laxative or emetic in high doses).</p>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <span class="indigenous-tag">Ginebigo-ojiibik</span>
+                            <h3>Seneca Snakeroot</h3>
+                            <p class="botanical-meta">Polygala senega</p>
+                            <p><strong>Habitat:</strong> Prefers high-altitude rocky or limestone environments from New England to the Canadian Rockies. Stands 0.5 to 2 feet tall with white/pink spikes.</p>
+                            <p class="usage-text"><strong>Traditional Uses:</strong> Historically treated snakebites, colds, sore throats, toothaches, and earaches. Modern applications deploy it as a powerful cough syrup expectorant and throat gargle (acts as a laxative or emetic in high doses).</p>
+                            <button class="flip-btn" onclick="toggleFlip(this)">See Modern Match</button>
+                        </div>
+                        <div class="flip-card-back">
+                            <span class="modern-tag">Modern Drugstore Match</span>
+                            <h3>Guaifenesin (Mucinex / Robitussin)</h3>
+                            <p class="synthesis-desc">The plant's natural ability to clear out mucus from your throat and chest is the exact same method used by popular over-the-counter cough syrups to break up chest congestion today.</p>
+                            <button class="flip-btn back-btn" onclick="toggleFlip(this)">Go Back to Plant</button>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="concept-card">
-                    <span class="indigenous-tag">Makizin</span>
-                    <h3>Yellow Lady's Slipper</h3>
-                    <p style="font-style: italic; color: #42574c; margin-bottom: 0.5rem;">Cypripedium parviflorum</p>
-                    <p><strong>Habitat:</strong> Specialized woodland and bog environments, growing up to 31.25 inches with strongly ribbed leaves and a specialized pouch-shaped flower to enforce insect cross-pollination.</p>
-                    <p style="margin-top: 0.5rem;"><strong>Traditional Uses:</strong> Critically revered in Ojibway legend (inspiring moccasin designs). Its unpleasantly scented roots function as an antispasmodic, sedative, and nerve tonic to treat severe anxiety, tension, and sleep issues. Requires alcohol tincture extraction.</p>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <span class="indigenous-tag">Makizin</span>
+                            <h3>Yellow Lady's Slipper</h3>
+                            <p class="botanical-meta">Cypripedium parviflorum</p>
+                            <p><strong>Habitat:</strong> Specialized woodland and bog environments, growing up to 31.25 inches with strongly ribbed leaves and a specialized pouch-shaped flower to enforce insect cross-pollination.</p>
+                            <p class="usage-text"><strong>Traditional Uses:</strong> Critically revered in Ojibway legend. Its unpleasantly scented roots function as an antispasmodic, sedative, and nerve tonic to treat severe anxiety, tension, and sleep issues. Requires alcohol tincture extraction.</p>
+                            <button class="flip-btn" onclick="toggleFlip(this)">See Modern Match</button>
+                        </div>
+                        <div class="flip-card-back">
+                            <span class="modern-tag">Modern Drugstore Match</span>
+                            <h3>Alprazolam (Xanax) / Diazepam (Valium)</h3>
+                            <p class="synthesis-desc">Using this root as a nerve tonic and relaxant to treat heavy stress and sleep loss directly targets the same brain pathways that prescription anti-anxiety and sedative pills use today to calm the nervous system.</p>
+                            <button class="flip-btn back-btn" onclick="toggleFlip(this)">Go Back to Plant</button>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="concept-card">
-                    <span class="indigenous-tag">Manomin</span>
-                    <h3>Wild Rice</h3>
-                    <p style="font-style: italic; color: #42574c; margin-bottom: 0.5rem;">Zizania aquatica</p>
-                    <p><strong>Habitat:</strong> Large aquatic grass growing 10 to 12 feet tall in shallow, slow-moving waters across eastern North America, ripening into dark purple seed-heavy spikes by autumn.</p>
-                    <p style="margin-top: 0.5rem;"><strong>Traditional Uses:</strong> A vital regional dietary staple for First Nations. Seeds are boiled like rice, ground into meal for thickening soups and baking bread, providing a dense supply of essential riboflavin and niacin.</p>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <span class="indigenous-tag">Manomin</span>
+                            <h3>Wild Rice</h3>
+                            <p class="botanical-meta">Zizania aquatica</p>
+                            <p><strong>Habitat:</strong> Large aquatic grass growing 10 to 12 feet tall in shallow, slow-moving waters across eastern North America, ripening into dark purple seed-heavy spikes by autumn.</p>
+                            <p class="usage-text"><strong>Traditional Uses:</strong> A vital regional dietary staple for First Nations. Seeds are boiled like rice, ground into meal for thickening soups and baking bread, providing a dense supply of essential riboflavin and niacin.</p>
+                            <button class="flip-btn" onclick="toggleFlip(this)">See Modern Match</button>
+                        </div>
+                        <div class="flip-card-back">
+                            <span class="modern-tag">Modern Drugstore Match</span>
+                            <h3>Vitamin B-Complex Tablets / Nutritional Supplements</h3>
+                            <p class="synthesis-desc">The high levels of natural riboflavin and niacin found in this grain are the exact same health-boosting B-vitamins packed into daily pharmacy multivitamin tablets to keep up our energy and cell health.</p>
+                            <button class="flip-btn back-btn" onclick="toggleFlip(this)">Go Back to Plant</button>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="concept-card">
-                    <span class="indigenous-tag">Mayagi Mashkiki</span>
-                    <h3>Hoary Puccoon</h3>
-                    <p style="font-style: italic; color: #42574c; margin-bottom: 0.5rem;">Lithospermum canescens</p>
-                    <p><strong>Habitat:</strong> Early-blooming prairie perennial strict to untouched virgin prairies spanning Saskatchewan to Texas. Grows 18 inches tall, wrapped in long white hairs with a central taproot.</p>
-                    <p style="margin-top: 0.5rem;"><strong>Traditional Uses:</strong> Its distinctive ivory-like seeds and central taproot were historically utilized inside ceremonial rattles, and the plant was harvested to generate a rich, permanent reddish pigment.</p>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <span class="indigenous-tag">Mayagi Mashkosiw</span>
+                            <h3>Big Bluestem</h3>
+                            <p class="botanical-meta">Andropogon gerardii</p>
+                            <p><strong>Habitat:</strong> Dominant prairie grass reaching 2 to 6 feet in height, featuring incredibly deep roots extending down to 12 feet to survive severe droughts. Favors fertile, dry lowland soils.</p>
+                            <p class="usage-text"><strong>Traditional Uses:</strong> Forms dense clumps of long, flat leaves used historically in decoctions to manage high fevers and painful digestive tract disorders.</p>
+                            <button class="flip-btn" onclick="toggleFlip(this)">See Modern Match</button>
+                        </div>
+                        <div class="flip-card-back">
+                            <span class="modern-tag">Modern Drugstore Match</span>
+                            <h3>Acetaminophen (Tylenol)</h3>
+                            <p class="synthesis-desc">Drinking a leaf mix specifically to break a burning fever works exactly like taking a modern fever-reducer pill from the pharmacy to bring your body temperature safely back down.</p>
+                            <button class="flip-btn back-btn" onclick="toggleFlip(this)">Go Back to Plant</button>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="concept-card">
-                    <span class="indigenous-tag">Mayagi Mashkosiw</span>
-                    <h3>Big Bluestem</h3>
-                    <p style="font-style: italic; color: #42574c; margin-bottom: 0.5rem;">Andropogon gerardii</p>
-                    <p><strong>Habitat:</strong> Dominant prairie grass reaching 2 to 6 feet in height, featuring incredibly deep roots extending down to 12 feet to survive severe droughts. Favors fertile, dry lowland soils.</p>
-                    <p style="margin-top: 0.5rem;"><strong>Traditional Uses:</strong> Forms dense clumps of long, flat leaves used historically in decoctions to manage high fevers and painful digestive tract disorders.</p>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <span class="indigenous-tag">Mazaanaatig</span>
+                            <h3>Canada Thistle</h3>
+                            <p class="botanical-meta">Cirsium arvense</p>
+                            <p><strong>Habitat:</strong> Introduced by Europeans; thrives aggressively in disturbed lands, roadsides, and pastures. Highly branched, smooth-stemmed, standing 1 to 5 feet with spiny leaves.</p>
+                            <p class="usage-text"><strong>Traditional Uses:</strong> Its deep roots have historically been prepared as astringents, diuretics, general tonics, and remedies for localized toothaches. The soft, fuzzy material on its seeds provides exceptional tinder for fire-starting.</p>
+                            <button class="flip-btn" onclick="toggleFlip(this)">See Modern Match</button>
+                        </div>
+                        <div class="flip-card-back">
+                            <span class="modern-tag">Modern Drugstore Match</span>
+                            <h3>Hydrochlorothiazide (Microzide) / Benzocaine Toothache Gels</h3>
+                            <p class="synthesis-desc">Using this plant as a fluid flusher and a toothache blocker matches the combined power of modern pharmacy blood pressure water pills and over-the-counter numbing toothache gels.</p>
+                            <button class="flip-btn back-btn" onclick="toggleFlip(this)">Go Back to Plant</button>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="concept-card">
-                    <span class="indigenous-tag">Mazaanaatig</span>
-                    <h3>Canada Thistle</h3>
-                    <p style="font-style: italic; color: #42574c; margin-bottom: 0.5rem;">Cirsium arvense</p>
-                    <p><strong>Habitat:</strong> Introduced by Europeans; thrives aggressively in disturbed lands, roadsides, and pastures. Highly branched, smooth-stemmed, standing 1 to 5 feet with spiny leaves.</p>
-                    <p style="margin-top: 0.5rem;"><strong>Traditional Uses:</strong> Its deep roots have historically been prepared as astringents, diuretics, general tonics, and remedies for localized toothaches. The soft, fuzzy material on its seeds provides exceptional tinder for fire-starting.</p>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <span class="indigenous-tag">Meskojiibikak</span>
+                            <h3>Bloodroot</h3>
+                            <p class="botanical-meta">Sanguinaria canadensis</p>
+                            <p><strong>Habitat:</strong> Low-growing perennial of eastern North American woodlands, recognizable by waxy-white early spring blossoms and a single deeply lobed grayish-green leaf.</p>
+                            <p class="usage-text"><strong>Traditional Uses:</strong> Named for the vibrant red juice found in its rootstock. Used as a dye, a tool for divination, and a remedy for fevers/rheumatism. Modernly used as an expectorant for congestion. Contains dangerous, toxic opium-like alkaloids.</p>
+                            <button class="flip-btn" onclick="toggleFlip(this)">See Modern Match</button>
+                        </div>
+                        <div class="flip-card-back">
+                            <span class="modern-tag">Modern Drugstore Match</span>
+                            <h3>Codeine / Morphine Sulfate</h3>
+                            <p class="synthesis-desc">The strong, dangerous, opium-like chemical blocks hidden inside this root function on the exact same nervous system paths used by hospital pain medicines to stop heavy coughing and block pain.</p>
+                            <button class="flip-btn back-btn" onclick="toggleFlip(this)">Go Back to Plant</button>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="concept-card">
-                    <span class="indigenous-tag">Meskojiibikak</span>
-                    <h3>Bloodroot</h3>
-                    <p style="font-style: italic; color: #42574c; margin-bottom: 0.5rem;">Sanguinaria canadensis</p>
-                    <p><strong>Habitat:</strong> Low-growing perennial of eastern North American woodlands, recognizable by waxy-white early spring blossoms and a single deeply lobed grayish-green leaf.</p>
-                    <p style="margin-top: 0.5rem;"><strong>Traditional Uses:</strong> Named for the vibrant red juice found in its rootstock. Used as a dye, a tool for divination, and a remedy for fevers/rheumatism. Modernly used as an expectorant for congestion. Contains dangerous, toxic opium-like alkaloids; avoid if pregnant.</p>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <span class="indigenous-tag">Mitigomizh</span>
+                            <h3>Bur Oak</h3>
+                            <p class="botanical-meta">Quercus macrocarpa</p>
+                            <p><strong>Habitat:</strong> Massive, widely distributed tree exceeding 100 feet in height with deeply ridged bark and unique acorns half-covered by warty, long-fringed caps ripening in fall.</p>
+                            <p class="usage-text"><strong>Traditional Uses:</strong> Versatile tree: wood was crafted into bows/spears; nut meat processed into pastes; inner bark brewed into medicinal teas for chronic diarrhea and heart issues.</p>
+                            <button class="flip-btn" onclick="toggleFlip(this)">See Modern Match</button>
+                        </div>
+                        <div class="flip-card-back">
+                            <span class="modern-tag">Modern Drugstore Match</span>
+                            <h3>Loperamide (Imodium) / Bismuth Subsalicylate (Pepto-Bismol)</h3>
+                            <p class="synthesis-desc">Brewing the inner bark of this oak tree to instantly calm severe stomach trouble works just like modern liquid and pill medications used to coat the stomach and stop diarrhea.</p>
+                            <button class="flip-btn back-btn" onclick="toggleFlip(this)">Go Back to Plant</button>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="concept-card">
-                    <span class="indigenous-tag">Mitigomizh</span>
-                    <h3>Bur Oak</h3>
-                    <p style="font-style: italic; color: #42574c; margin-bottom: 0.5rem;">Quercus macrocarpa</p>
-                    <p><strong>Habitat:</strong> Massive, widely distributed tree exceeding 100 feet in height with deeply ridged bark and unique acorns half-covered by warty, long-fringed caps ripening in fall.</p>
-                    <p style="margin-top: 0.5rem;"><strong>Traditional Uses:</strong> Exceptionally versatile: wood provided durable material for bows and spears, nut meat was processed into edible grits and pastes, and the inner bark was brewed into medicinal teas for chronic diarrhea and heart issues.</p>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <span class="indigenous-tag">Namepine</span>
+                            <h3>Wild Ginger</h3>
+                            <p class="botanical-meta">Asarum canadense</p>
+                            <p><strong>Habitat:</strong> Low-growing ground cover in rich woods, featuring pairs of large, hairy, heart-shaped leaves that canopy a single ground-level reddish-brown flower.</p>
+                            <p class="usage-text"><strong>Traditional Uses:</strong> Gives off a pungent ginger aroma; roots can be boiled with sugar into candy. Medicinally used to ease whooping cough, heal wounds, and settle stomachs. Chewed by local sturgeon fishermen to prevent boats from flipping.</p>
+                            <button class="flip-btn" onclick="toggleFlip(this)">See Modern Match</button>
+                        </div>
+                        <div class="flip-card-back">
+                            <span class="modern-tag">Modern Drugstore Match</span>
+                            <h3>Dextromethorphan (Robitussin DM) / Antacid Tablets</h3>
+                            <p class="synthesis-desc">Using this root to settle an upset stomach and soothe heavy, non-stop coughing fits acts just like taking modern store-bought antacids alongside standard liquid cough medicines.</p>
+                            <button class="flip-btn back-btn" onclick="toggleFlip(this)">Go Back to Plant</button>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="concept-card">
-                    <span class="indigenous-tag">Namepine</span>
-                    <h3>Wild Ginger</h3>
-                    <p style="font-style: italic; color: #42574c; margin-bottom: 0.5rem;">Asarum canadense</p>
-                    <p><strong>Habitat:</strong> Low-growing ground cover in rich woods, featuring pairs of large, hairy, heart-shaped leaves that canopy a single ground-level reddish-brown flower.</p>
-                    <p style="margin-top: 0.5rem;"><strong>Traditional Uses:</strong> Gives off a pungent ginger aroma; roots can be boiled with sugar into candy. Medicinally used to aid childbirth, ease whooping cough, heal wounds, and settle stomachs. Chewed by local sturgeon fishermen to prevent boats from flipping. Can cause skin irritation.</p>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <span class="indigenous-tag">Niibaa'obag</span>
+                            <h3>Closed Gentian</h3>
+                            <p class="botanical-meta">Gentiana andrewsii</p>
+                            <p><strong>Habitat:</strong> Damp fields and open forest borders from Quebec to North Carolina. Grows 24 inches tall with tightly closed, cup-shaped blue-to-violet flowers.</p>
+                            <p class="usage-text"><strong>Traditional Uses:</strong> The intensely bitter root has a long history of traditional use as an appetite stimulant, general tonic, laxative, and cathartic used to treat weak stomachs.</p>
+                            <button class="flip-btn" onclick="toggleFlip(this)">See Modern Match</button>
+                        </div>
+                        <div class="flip-card-back">
+                            <span class="modern-tag">Modern Drugstore Match</span>
+                            <h3>Metoclopramide (Reglan) / Milk of Magnesia</h3>
+                            <p class="synthesis-desc">The extra-bitter root was used to force a weak, frozen digestive system to kickstart and clear itself out. This matches the exact action of modern stomach-starting prescriptions and pharmacy laxatives.</p>
+                            <button class="flip-btn back-btn" onclick="toggleFlip(this)">Go Back to Plant</button>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="concept-card">
-                    <span class="indigenous-tag">Niibaa'obag</span>
-                    <h3>Closed Gentian</h3>
-                    <p style="font-style: italic; color: #42574c; margin-bottom: 0.5rem;">Gentiana andrewsii</p>
-                    <p><strong>Habitat:</strong> Damp fields and open forest borders from Quebec to North Carolina. Grows 24 inches tall with tightly closed, cup-shaped blue-to-violet flowers.</p>
-                    <p style="margin-top: 0.5rem;"><strong>Traditional Uses:</strong> The intensely bitter root has a long history of traditional use as an appetite stimulant, general tonic, laxative, and cathartic used to treat weak stomachs and historical nervous conditions.</p>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <span class="indigenous-tag">Nookwezigan</span>
+                            <h3>Yarrow</h3>
+                            <p class="botanical-meta">Achillea millefolium</p>
+                            <p><strong>Habitat:</strong> Highly prevalent perennial in disturbed ditches and fields. Standing 1 to 3 feet tall with gray-green hairy stems and stalkless, fern-like fragrant leaves.</p>
+                            <p class="usage-text"><strong>Traditional Uses:</strong> Crushed leaves stop bleeding instantly when applied directly to cuts. Steeped into a blood-purifying tea to treat fevers, colds, stomach cramps, and headaches.</p>
+                            <button class="flip-btn" onclick="toggleFlip(this)">See Modern Match</button>
+                        </div>
+                        <div class="flip-card-back">
+                            <span class="modern-tag">Modern Drugstore Match</span>
+                            <h3>Styptic Powder / Ibuprofen (Advil)</h3>
+                            <p class="synthesis-desc">Yarrow's two-in-one skill of closing up bloody cuts instantly while relieving internal body pain, headaches, and stomach cramps is directly mirrored by first-aid clotting powders and pharmacy painkillers like Advil.</p>
+                            <button class="flip-btn back-btn" onclick="toggleFlip(this)">Go Back to Plant</button>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="concept-card">
-                    <span class="indigenous-tag">Nookwezigan</span>
-                    <h3>Yarrow</h3>
-                    <p style="font-style: italic; color: #42574c; margin-bottom: 0.5rem;">Achillea millefolium</p>
-                    <p><strong>Habitat:</strong> Highly prevalent perennial in disturbed ditches and fields. Standing 1 to 3 feet tall with gray-green hairy stems and stalkless, fern-like fragrant leaves.</p>
-                    <p style="margin-top: 0.5rem;"><strong>Traditional Uses:</strong> Crushed leaves release a distinct scent and stop bleeding instantly when applied directly to cuts. Steeped into a blood-purifying tea to treat fevers, colds, stomach cramps, headaches, and internal hemorrhaging.</p>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <span class="indigenous-tag">Ode'iminidjiibik</span>
+                            <h3>Wild Strawberry</h3>
+                            <p class="botanical-meta">Fragaria virginiana</p>
+                            <p><strong>Habitat:</strong> Low-growing ground plant across North America, spreading via thin running stems, three-parted toothed leaves, and small five-petaled white spring flowers.</p>
+                            <p class="usage-text"><strong>Traditional Uses:</strong> The sweet fruit holds immense cultural significance. Tea prepared from the leaves treats severe cholera and stimulates standard appetite.</p>
+                            <button class="flip-btn" onclick="toggleFlip(this)">See Modern Match</button>
+                        </div>
+                        <div class="flip-card-back">
+                            <span class="modern-tag">Modern Drugstore Match</span>
+                            <h3>Oral Rehydration Salts (ORS) / Pedialyte</h3>
+                            <p class="synthesis-desc">Using leaf teas to treat the severe dehydration and weakness caused by cholera acts as an early version of the electrolyte solutions medical clinics use today to quickly rebuild your body's water balance.</p>
+                            <button class="flip-btn back-btn" onclick="toggleFlip(this)">Go Back to Plant</button>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="concept-card">
-                    <span class="indigenous-tag">Ode'iminidjiibik</span>
-                    <h3>Wild Strawberry</h3>
-                    <p style="font-style: italic; color: #42574c; margin-bottom: 0.5rem;">Fragaria virginiana</p>
-                    <p><strong>Habitat:</strong> Low-growing ground plant across North America, spreading via thin running stems, three-parted toothed leaves, and small five-petaled white spring flowers.</p>
-                    <p style="margin-top: 0.5rem;"><strong>Traditional Uses:</strong> The sweet fruit holds immense cultural significance, marking the arrival of summer for women concluding traditional ten-day fasts to revitalize their bodies. Tea prepared from the leaves treats severe cholera and stimulates standard appetite.</p>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <span class="indigenous-tag">Omakakiibag</span>
+                            <h3>Pale Touch-Me-Not / Jewelweed</h3>
+                            <p class="botanical-meta">Impatiens pallida</p>
+                            <p><strong>Habitat:</strong> Tall, translucent-stemmed plant of wet woods and shaded areas, featuring dangling pale yellow flowers and fragile seed capsules that burst violently when ripe.</p>
+                            <p class="usage-text"><strong>Traditional Uses:</strong> The soothing liquid sap is applied externally as an immediate remedy for ringworm, warts, hemorrhoids, and chemical irritation from poison ivy or stinging nettles.</p>
+                            <button class="flip-btn" onclick="toggleFlip(this)">See Modern Match</button>
+                        </div>
+                        <div class="flip-card-back">
+                            <span class="modern-tag">Modern Drugstore Match</span>
+                            <h3>Hydrocortisone Cream 1% / Calamine Lotion</h3>
+                            <p class="synthesis-desc">Rubbing the juicy plant sap onto skin to stop poison ivy burns, nettle stings, and itchy rashes works exactly like using over-the-counter hydrocortisone creams and soothing calamine lotions today.</p>
+                            <button class="flip-btn back-btn" onclick="toggleFlip(this)">Go Back to Plant</button>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="concept-card">
-                    <span class="indigenous-tag">Omakakiibag</span>
-                    <h3>Pale Touch-Me-Not / Jewelweed</h3>
-                    <p style="font-style: italic; color: #42574c; margin-bottom: 0.5rem;">Impatiens pallida</p>
-                    <p><strong>Habitat:</strong> Tall, translucent-stemmed plant of wet woods and shaded areas, featuring dangling pale yellow flowers and fragile seed capsules that burst violently when ripe.</p>
-                    <p style="margin-top: 0.5rem;"><strong>Traditional Uses:</strong> The soothing liquid sap is applied externally as an immediate remedy for ringworm, warts, hemorrhoids, and chemical irritation from poison ivy or stinging nettles. Raw consumption is dangerous due to sharp calcium oxalate crystals (neutralized by cooking).</p>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <span class="indigenous-tag">Sasapkwanins</span>
+                            <h3>Wild Bergamot</h3>
+                            <p class="botanical-meta">Monarda fistulosa</p>
+                            <p><strong>Habitat:</strong> Fragrant, 2-to-4-foot-tall herbaceous perennial found in dry woods, thickets, and forest clearings east of the Rockies, producing two-lipped tubular lavender flowers.</p>
+                            <p class="usage-text"><strong>Traditional Uses:</strong> Aromatic leaves are dried and steeped into a potent, minty therapeutic tea valued as an insect repellent and a remedy for severe digestive complications and external burns.</p>
+                            <button class="flip-btn" onclick="toggleFlip(this)">See Modern Match</button>
+                        </div>
+                        <div class="flip-card-back">
+                            <span class="modern-tag">Modern Drugstore Match</span>
+                            <h3>Bacitracin Ointment / Simethicone (Gas-X)</h3>
+                            <p class="synthesis-desc">Using this minty plant to treat surface burns while settling painful stomach gas fits perfectly with modern anti-infection skin ointments and over-the-counter gas relief tablets.</p>
+                            <button class="flip-btn back-btn" onclick="toggleFlip(this)">Go Back to Plant</button>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="concept-card">
-                    <span class="indigenous-tag">Oshkiniikwebagoons</span>
-                    <h3>Common Tansy</h3>
-                    <p style="font-style: italic; color: #42574c; margin-bottom: 0.5rem;">Tanacetum vulgare</p>
-                    <p><strong>Habitat:</strong> Erect, aromatic perennial growing 2 to 3 feet tall along disturbed roadsides and open fields, producing flat clusters of bright orange-yellow button flowers.</p>
-                    <p style="margin-top: 0.5rem;"><strong>Traditional Uses:</strong> Historically used in small quantities for fevers, earaches, and abortions. Ingestion is now strongly discouraged because it contains tanacetum oil, which is highly poisonous and potentially fatal. Highly invasive; extracts make powerful organic pesticides.</p>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <span class="indigenous-tag">Wabos'odji'bik</span>
+                            <h3>Wild Sarsaparilla</h3>
+                            <p class="botanical-meta">Aralia nudicaulis</p>
+                            <p><strong>Habitat:</strong> 19-inch-tall perennial of mixed and hardwood forests, featuring a stout woody stem splitting into a single leaf of 3-5 leaflets and a separate leafless stalk.</p>
+                            <p class="usage-text"><strong>Traditional Uses:</strong> Sweet rhizome used to brew early root beer. Medicinally deployed to soothe chronic coughs, heal fresh cuts, treat ulcers, and manage painful shingles outbreaks.</p>
+                            <button class="flip-btn" onclick="toggleFlip(this)">See Modern Match</button>
+                        </div>
+                        <div class="flip-card-back">
+                            <span class="modern-tag">Modern Drugstore Match</span>
+                            <h3>Acyclovir (Zovirax) / Triple Antibiotic Ointment (Neosporin)</h3>
+                            <p class="synthesis-desc">Using this root to dry up painful viral shingles skin breakouts while fixing cuts matches the combined goals of prescription anti-viral skin treatments and over-the-counter antibiotic ointments like Neosporin.</p>
+                            <button class="flip-btn back-btn" onclick="toggleFlip(this)">Go Back to Plant</button>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="concept-card">
-                    <span class="indigenous-tag">Ozhaawashwa-mashkosiwan</span>
-                    <h3>Kentucky Bluegrass</h3>
-                    <p style="font-style: italic; color: #42574c; margin-bottom: 0.5rem;">Poa pratensis</p>
-                    <p><strong>Habitat:</strong> Densely clumped grass common across North American pastures and lawns, growing 1 to 3 feet tall with smooth stems, wide basal leaves, and pyramidal green spikelet clusters.</p>
-                    <p style="margin-top: 0.5rem;"><strong>Traditional Uses:</strong> Heavily cultivated for continuous livestock grazing and lawn stabilization; noted as being remarkably difficult for an untrained eye to differentiate from related wild grass species.</p>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <span class="indigenous-tag">Wezaawinagak</span>
+                            <h3>Canada Goldenrod</h3>
+                            <p class="botanical-meta">Solidago canadensis</p>
+                            <p><strong>Habitat:</strong> Tall, hairy-stemmed plant growing up to 5 feet high across North America, showcasing prominent veins on lanceolate leaves and tiny yellow flower clusters on arching branches.</p>
+                            <p class="usage-text"><strong>Traditional Uses:</strong> Frequently falsely blamed for hay fever. Crushed roots or flower poultices were traditionally applied to alleviate painful boils, burns, and ulcers; leaves serve as an organic origin for rubber extraction.</p>
+                            <button class="flip-btn" onclick="toggleFlip(this)">See Modern Match</button>
+                        </div>
+                        <div class="flip-card-back">
+                            <span class="modern-tag">Modern Drugstore Match</span>
+                            <h3>Silver Sulfadiazine Cream (Silvadene)</h3>
+                            <p class="synthesis-desc">Placing mashed flower packs on skin sores to cool down and heal painful boils or ulcers works just like the specialized silver-based burn creams used by modern hospitals to stop infections and repair damaged skin.</p>
+                            <button class="flip-btn back-btn" onclick="toggleFlip(this)">Go Back to Plant</button>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="concept-card">
-                    <span class="indigenous-tag">Sasapkwanins</span>
-                    <h3>Wild Bergamot</h3>
-                    <p style="font-style: italic; color: #42574c; margin-bottom: 0.5rem;">Monarda fistulosa</p>
-                    <p><strong>Habitat:</strong> Fragrant, 2-to-4-foot-tall herbaceous perennial found in dry woods, thickets, and forest clearings east of the Rockies, producing two-lipped tubular lavender flowers.</p>
-                    <p style="margin-top: 0.5rem;"><strong>Traditional Uses:</strong> Aromatic leaves are added in modest amounts to refresh salads and drinks, or dried and steeped into a potent, minty therapeutic tea valued as an insect repellent and a remedy for severe digestive complications and external burns.</p>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <span class="indigenous-tag">Wiigwaas</span>
+                            <h3>White Birch</h3>
+                            <p class="botanical-meta">Betula papyrifera</p>
+                            <p><strong>Habitat:</strong> Medium-sized hardwood tree with a signature white peeling trunk bark as it matures, thriving best in sandy, well-drained soils but tolerating bogs.</p>
+                            <p class="usage-text"><strong>Traditional Uses:</strong> Sap is boiled into syrup; inner bark acts as emergency food. Outer bark fashioned into canoes and baskets; resin acts as a disinfectant for stomach pain.</p>
+                            <button class="flip-btn" onclick="toggleFlip(this)">See Modern Match</button>
+                        </div>
+                        <div class="flip-card-back">
+                            <span class="modern-tag">Modern Drugstore Match</span>
+                            <h3>Activated Charcoal Capsules</h3>
+                            <p class="synthesis-desc">Using birch bark resin as an internal disinfectant to bind up toxins and stop stomach pain works exactly like using pharmacy-bought activated charcoal capsules to trap bad stomach bugs and irritants.</p>
+                            <button class="flip-btn back-btn" onclick="toggleFlip(this)">Go Back to Plant</button>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="concept-card">
-                    <span class="indigenous-tag">Wabos'odji'bik</span>
-                    <h3>Wild Sarsaparilla</h3>
-                    <p style="font-style: italic; color: #42574c; margin-bottom: 0.5rem;">Aralia nudicaulis</p>
-                    <p><strong>Habitat:</strong> 19-inch-tall perennial of mixed and hardwood forests, featuring a stout woody stem splitting into a single leaf of 3-5 leaflets and a separate leafless stalk yielding dark summer berries.</p>
-                    <p style="margin-top: 0.5rem;"><strong>Traditional Uses:</strong> Extremely popular 1800s spring tonic; settlers used berries for winemaking and the sweet rhizome to brew early root beer. Medicinally deployed to soothe chronic coughs, heal fresh cuts, treat ulcers, and manage painful shingles outbreaks.</p>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <span class="indigenous-tag">Wiinizikens</span>
+                            <h3>Panicled Aster</h3>
+                            <p class="botanical-meta">Symphyotrichum lanceolatum</p>
+                            <p><strong>Habitat:</strong> Tall plant (4 to 5 feet) producing a massive spread of white flower heads with pinkish-yellow centers from August to September in damp ditches.</p>
+                            <p class="usage-text"><strong>Traditional Uses:</strong> Prepared as a healing infusion alongside other flora to reduce raging fevers, boiled into a decoction to wash open wounds, or dried into a powdered salve for skin abrasions.</p>
+                            <button class="flip-btn" onclick="toggleFlip(this)">See Modern Match</button>
+                        </div>
+                        <div class="flip-card-back">
+                            <span class="modern-tag">Modern Drugstore Match</span>
+                            <h3>Acetaminophen (Tylenol) / Chlorhexidine Gluconate Antiseptic Wash</h3>
+                            <p class="synthesis-desc">Using herbal teas to lower heavy fevers while using a plant wash to clean out scrapes behaves exactly like taking liquid fever reducers alongside deep antiseptic skin cleansers.</p>
+                            <button class="flip-btn back-btn" onclick="toggleFlip(this)">Go Back to Plant</button>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="concept-card">
-                    <span class="indigenous-tag">Wezaawinagak</span>
-                    <h3>Canada Goldenrod</h3>
-                    <p style="font-style: italic; color: #42574c; margin-bottom: 0.5rem;">Solidago canadensis</p>
-                    <p><strong>Habitat:</strong> Tall, hairy-stemmed plant growing up to 5 feet high across North America, showcasing prominent veins on lanceolate leaves and tiny yellow flower clusters on arching branches.</p>
-                    <p style="margin-top: 0.5rem;"><strong>Traditional Uses:</strong> Frequently falsely blamed for seasonal hay fever (the true culprit is Ragweed). Crushed roots or flower poultices were traditionally applied to alleviate painful boils, burns, and ulcers; leaves serve as an organic origin for rubber and latex extraction.</p>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <span class="indigenous-tag">Wiishkobanijiibik</span>
+                            <h3>Wild Licorice Root</h3>
+                            <p class="botanical-meta">Glycyrrhiza lepidota</p>
+                            <p><strong>Habitat:</strong> 1-to-3-foot-tall plant found in moist, sandy prairies and stream valleys, featuring sticky stems, opposite leaves, alfalfa-like cream flowers.</p>
+                            <p class="usage-text"><strong>Traditional Uses:</strong> Fleshy root contains glycyrrhizin (50x sweeter than sugar). Edible roots and shoots. Historically deployed to treat deep skin sores, toothaches, and foot ailments.</p>
+                            <button class="flip-btn" onclick="toggleFlip(this)">See Modern Match</button>
+                        </div>
+                        <div class="flip-card-back">
+                            <span class="modern-tag">Modern Drugstore Match</span>
+                            <h3>Benzocaine Gel / Topical Antiseptic Ointments</h3>
+                            <p class="synthesis-desc">Isolating the sweet root's natural numbing and healing powers to treat deep skin sores and toothaches mirrors modern over-the-counter local numbing oral gels and healing ointments.</p>
+                            <button class="flip-btn back-btn" onclick="toggleFlip(this)">Go Back to Plant</button>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="concept-card">
-                    <span class="indigenous-tag">Wiigwaas</span>
-                    <h3>White Birch</h3>
-                    <p style="font-style: italic; color: #42574c; margin-bottom: 0.5rem;">Betula papyrifera</p>
-                    <p><strong>Habitat:</strong> Medium-sized hardwood tree with a signature white peeling trunk bark as it matures, thriving best in sandy, well-drained soils but tolerating bogs and gravelly terrains.</p>
-                    <p style="margin-top: 0.5rem;"><strong>Traditional Uses:</strong> Incredibly versatile: sap is boiled into syrup or fermented into beer/wine; inner bark acts as emergency food; flexible wood crafted into bows/spears. Outer bark was fashioned into canoes, baskets, and cradles; resin acts as a disinfectant for stomach pain.</p>
-                </div>
-
-                <div class="concept-card">
-                    <span class="indigenous-tag">Wiinizikens</span>
-                    <h3>Panicled Aster</h3>
-                    <p style="font-style: italic; color: #42574c; margin-bottom: 0.5rem;">Symphyotrichum lanceolatum</p>
-                    <p><strong>Habitat:</strong> Tall plant (4 to 5 feet) producing a massive spread of white or slightly violet-tinged flower heads with pinkish-yellow centers from August to September in damp ditches.</p>
-                    <p style="margin-top: 0.5rem;"><strong>Traditional Uses:</strong> Prepared as a healing infusion alongside other flora to reduce raging fevers, boiled into a decoction to wash open wounds, or dried into a powdered salve for skin abrasions. Inhaling smoke from burning blossoms cures stubborn nosebleeds.</p>
-                </div>
-
-                <div class="concept-card">
-                    <span class="indigenous-tag">Wiishkobanijiibik</span>
-                    <h3>Wild Licorice Root</h3>
-                    <p style="font-style: italic; color: #42574c; margin-bottom: 0.5rem;">Glycyrrhiza lepidota</p>
-                    <p><strong>Habitat:</strong> 1-to-3-foot-tall plant found in moist, sandy prairies and stream valleys, featuring sticky stems, opposite leaves, alfalfa-like cream flowers, and fruit covered in hooked spines.</p>
-                    <p style="margin-top: 0.5rem;"><strong>Traditional Uses:</strong> Fleshy root contains glycyrrhizin (50x sweeter than sugar), tasting like sweet potato when slow-roasted. Roots and young spring shoots are edible raw or cooked. Historically deployed to treat deep skin sores, toothaches, foot ailments, and to safely aid childbirth.</p>
-                </div>
-
-                <div class="concept-card">
-                    <span class="indigenous-tag">Zesabiins</span>
-                    <h3>Indian Hemp</h3>
-                    <p style="font-style: italic; color: #42574c; margin-bottom: 0.5rem;">Apocynum cannabinum</p>
-                    <p><strong>Habitat:</strong> Sturdy, erect plant standing 3 to 4 feet tall with a purplish stem, opposite leaves with a white plum-like coating, and spindle-shaped seed pods in disturbed roadsides and lakeshores.</p>
-                    <p style="margin-top: 0.5rem;"><strong>Traditional Uses:</strong> Incredibly strong fibers woven into durable twine and cordage that maintained strength underwater without shrinking—ideal for fishing nets, bowstrings, clothing, slings, and hunting nooses. **Contains dangerous cardio-toxins; must never be consumed.**</p>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <span class="indigenous-tag">Zesabiins</span>
+                            <h3>Indian Hemp</h3>
+                            <p class="botanical-meta">Apocynum cannabinum</p>
+                            <p><strong>Habitat:</strong> Sturdy, erect plant standing 3 to 4 feet tall with a purplish stem, opposite leaves with a white plum-like coating, and seed pods in disturbed roadsides.</p>
+                            <p class="usage-text"><strong>Traditional Uses:</strong> Incredibly strong fibers woven into durable twine for fishing nets and bowstrings. Used historically to treat coughs, but the plant contains dangerous cardio-toxins and must never be consumed.</p>
+                            <button class="flip-btn" onclick="toggleFlip(this)">See Modern Match</button>
+                        </div>
+                        <div class="flip-card-back">
+                            <span class="modern-tag">Modern Drugstore Match</span>
+                            <h3>Digoxin (Lanoxin)</h3>
+                            <p class="synthesis-desc">The heavy, dangerous heart-altering mixtures found naturally inside this wild plant match the core chemistry of prescription cardiac medications used under strict medical care to control heart contractions.</p>
+                            <button class="flip-btn back-btn" onclick="toggleFlip(this)">Go Back to Plant</button>
+                        </div>
+                    </div>
                 </div>
 
             </div>
@@ -229,8 +435,14 @@
     </main>
 
     <footer>
-        <p>&copy; 2026 RootRX Database | Indexed via Manitou Mounds &amp; Regional Language Archival Standards.</p>
+        <p>&copy; 2026 RootRX Database | Interactive Digital Presentation Framework.</p>
     </footer>
 
+    <script>
+        function toggleFlip(button) {
+            const card = button.closest('.flip-card');
+            card.classList.toggle('flipped');
+        }
+    </script>
 </body>
 </html>
