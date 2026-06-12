@@ -22,13 +22,12 @@ body {
     min-height: 100vh;
 }
 
-/* Header & Menu Layout */
+/* Header Menu Layout - Fixed Sticky Bug Here */
 header {
     background-color: rgba(27, 49, 34, 0.06);
     border-bottom: 2px solid var(--accent-dark-green);
     padding: 1.2rem 0;
-    position: sticky;
-    top: 0;
+    position: relative; /* Changed from sticky to relative so it never scrolls with you */
     z-index: 1000;
 }
 
